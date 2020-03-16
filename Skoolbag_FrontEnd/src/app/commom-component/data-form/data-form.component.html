@@ -1,0 +1,18 @@
+<form [formGroup]="SchoolForm" (ngSubmit)="submit(SchoolForm)">
+    <h1 mat-dialog-title>{{(data)?"Update":"Add"}} School</h1>
+    <mat-dialog-content>
+      <mat-form-field>
+        <input matInput formControlName="name" id="name" placeholder="Name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="address" id="address" placeholder="Address">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="count" id="count" placeholder="Number of Student">
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button type="submit" [disabled]="!SchoolForm.valid">{{(data)?"Update":"Add"}}</button>
+      <button mat-button type="button" mat-dialog-close>Cancel</button>
+    </mat-dialog-actions>
+  </form>

@@ -1,0 +1,30 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+.top-bar{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 24px 0;
+
+}
+body{
+    margin: 0px;
+}
+.spinner-section {
+    display: block;
+    align-content: center;
+    align-items: center;
+    height: 0px;
+ }
+ .spinner-margin {
+    margin: 5 50%;
+ }
+ .success-txt{
+     background-color:#4F8A10;
+ }
+ .error-txt{
+     background-color: #D8000C;
+ }
+ .default-txt{
+     background-color: #BDE5F8;
+ }

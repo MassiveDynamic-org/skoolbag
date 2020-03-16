@@ -1,0 +1,25 @@
+<div class="row">
+    <div *ngFor="let sch of schoolData; let i=index" class="schoolCard-item container ">
+        <div *ngIf="!!sch?.name" class="schoolCard-item-inner row" >
+            <div class=" col-sm-4 "><i class="fas fa-school"></i><span class="sch-txt">{{sch?.name}}</span></div>
+            <div class=" col-sm-4 "><i class="fas fa-address-card"></i><span class="sch-txt">{{sch?.address}}</span>
+            </div>
+            <div class=" col-sm-2 "><i class="fas fa-user-graduate"></i><span class="sch-txt">{{sch?.count}}</span>
+            </div>
+            <div class=" col-sm-1 " (click)="onClickRow(i,sch,'UPDATE')"><span class="sch-txt"><i class="fas fa-edit"></i></span></div>    
+            <div class=" col-sm-1 " (click)="onClickRow(i,sch,'DELETE')"><span class="sch-txt"><i class="fas fa-trash-alt"></i></span></div>    
+        </div>
+        <div *ngIf="schoolData.length==1 && !sch?.name || !schoolData.length" class="row">
+            <div class="col-sm-12 nodata"> No Data Found</div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="schoolCard-item container ">
+        <div class="schoolCard-item-inner no-border row">
+            <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+                (page)="onPageEvent($event)">
+            </mat-paginator>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <div class="row top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-10">
+          <form action="">
+            <mat-form-field class="">
+              <span class="sch-txt"><input  matInput placeholder="Filter" (input)="onFilterChange($event.target.value)" [value]="serachText"></span>
+            </mat-form-field>
+            <i class="fas fa-filter"></i>
+          </form>
+        </div>
+        <div class="col-2"><button color="primary" mat-button (click)="onSchoolAction()">Add new</button></div>
+      </div>
+    </div>
+  </div>
+  <section *ngIf="isLoading" class = "spinner-section">
+    <!--<mat-progress-spinner mode="indeterminate" class = "spinner-margin"> </mat-progress-spinner>-->
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+  </section>
+
+  <app-card  [data]="SchoolSate" (rowclick) = "onSchoolAction($event)"></app-card>
+  <!--(schools | async)-->
+    
+</div>
+<ng-template #cardcontainer>
+</ng-template>
+<router-outlet></router-outlet>

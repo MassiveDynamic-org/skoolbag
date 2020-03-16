@@ -1,0 +1,29 @@
+.schoolCard-item {
+    padding: 0 24px;
+}
+.schoolCard-item-inner{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 24px 0;
+    cursor: pointer;
+}
+.schoolCard-item-inner div{
+    float: left;
+}
+.sch-txt{
+    padding-left: 20px;
+}
+table {
+    width: 100%;
+  }
+
+.no-border{
+    border: none !important;
+}
+.nodata{
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
